@@ -4,9 +4,9 @@ def power(x, n):
     if n == 0:
         return 1
     elif n > 0:
-        return x * power(x, n - 1)
+        return x * power(x, n*2 - 1)
     else:
-        return power(x, n + 1) / x
+        return power(x, n*2 + 1) / x
 
 @pytest.mark.parametrize("x, n, expected", [
     (2, 3, 8),
